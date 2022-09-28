@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset=" UTF-8" />
+  <title>Documentos</title>
+  <link th:href="@{/assets/dist/css/bootstrap.min.css}" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}" href="../../static/css/main.css" />
+  <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}" href="../../static/css/header.css" />
+  <script th:src="@{/js/app.js}" type="text/javascript"></script>
+</head>
+
+<body>
+  <main>
+    <div class="p-5">
+      <form action="#" th:action="@{/convert}" method="post">
+        <div class="row g-3">
+          <div class="form-group">
+            <label for="templatePath">Caminho do Template</label>
+            <input type="text" class="form-control" id="templatePath" name="templatePath"
+              placeholder="Caminho do documento template">
+          </div>
+
+          <div class="form-group">
+            <label>Caminho Exemplo: /Users/cops/Developer/docs/models/EMD/EMD-EMENDA DE REDAÇÃO.docx</label>
+          </div>
+
+          <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#waitModal">
+            Converter
+          </button>
+        </div>
+      </form>
+
+      <!-- <hr class="mt-2 mb-3" />
+
+      <form id="form-upload" th:action="@{/upload}" method="post" enctype="multipart/form-data">
+        <div class="row g-2">
+          <div class="form-group">
+            <input id="input-file" name="document" type="file" value="" />
+          </div>
+
+          <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Carregar" />
+            <input class="btn btn-secondary" type="reset" value="Limpar" />
+          </div>
+        </div>
+      </form> -->
+
+      <div th:replace="~{fragments/wait-modal :: wait()}"></div>
+    </div>
+  </main>
+  <script th:src="@{/assets/dist/js/jquery-3.6.0.js}" type="text/javascript"></script>
+  <script th:src="@{/assets/dist/js/bootstrap.bundle.min.js}" type="text/javascript"></script>
+</body>
+
+</html>

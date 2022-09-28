@@ -1,0 +1,23 @@
+{
+	"folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#6b15f6",
+    },
+    "editor.fontSize": 18,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "editor.renderWhitespace": "all",
+    "java.configuration.updateBuildConfiguration": "automatic",
+  },
+  "extensions": {
+    "recommendations": [
+      "redhat.fabric8-analytics"
+    ]
+  },
+}

@@ -1,0 +1,26 @@
+gerador:
+  url: http://localhost:8082
+
+server:
+  port: 8081
+
+spring:
+  rabbitmq:
+    host: ${HOST_RABBIT:192.168.1.101}
+#    virtual-host: ${VIRTUAL_HOST_RABBIT_LD:vhost_ald1}
+    port: ${PORT_RABBIT:5672}
+    username: ${USER_RABBIT:admin}
+    password: ${PASSWORD_RABBIT:cops}
+
+  thymeleaf:
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    suffix: .html
+
+  web:
+    resources:
+      static-locations: classpath:/static/
+      cache:
+        period: 0
