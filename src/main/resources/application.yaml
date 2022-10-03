@@ -5,12 +5,6 @@ server:
   port: 8081
 
 spring:
-  rabbitmq:
-    host: ${HOST_RABBIT:192.168.1.101}
-#    virtual-host: ${VIRTUAL_HOST_RABBIT_LD:vhost_ald1}
-    port: ${PORT_RABBIT:5672}
-    username: ${USER_RABBIT:admin}
-    password: ${PASSWORD_RABBIT:cops}
 
   thymeleaf:
     cache: false
@@ -24,3 +18,28 @@ spring:
       static-locations: classpath:/static/
       cache:
         period: 0
+
+  rabbitmq:
+    host: ${HOST_RABBIT:192.168.1.101}
+#    virtual-host: ${VIRTUAL_HOST_RABBIT_LD:vhost_ald1}
+    port: ${PORT_RABBIT:5672}
+    username: ${USER_RABBIT:admin}
+    password: ${PASSWORD_RABBIT:cops}
+
+
+  # jpa:
+  #   show-sql: ${SHOW_SQL:true}
+  #   properties:
+  #     hibernate:
+  #       '[format_sql]': true
+  #       legacy_limit_handler: true
+  #   database-platform: ${JPA_DIALECT:org.hibernate.dialect.SQLServerDialect} 
+  #   hibernate:
+  #     naming:
+  #       physical-strategy: ${HIBERNATE_PHYSICAL_STRATEGY:org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl}
+
+  # datasource:
+  #   url: ${DATASOURCE_URL:jdbc:sqlserver://;serverName=helix.redecamara.camara.gov.br;port=1826;databaseName=SqlHomConlewf;encrypt=false;trustServerCertificate=false;}
+  #   username: ${DATASOURCE_USERNAME:usr_conlewf}
+  #   password: ${DATASOURCE_PASSWORD:1qaz2wsx3edc4rfv}
+  #   driverClassName: ${DATASOURCE_DRIVER_CLASS_NAME:com.microsoft.sqlserver.jdbc.SQLServerDriver}

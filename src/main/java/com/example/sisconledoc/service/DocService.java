@@ -40,7 +40,7 @@ public class DocService {
     sendTemplate(templatePath);
   }
 
-  public void uploadTemplate(MultipartFile template) throws IOException {
+  public void uploadTemplate(MultipartFile template, String templateDir, String templateName) throws IOException {
     MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
     ByteArrayResource fileAsResource;
     fileAsResource = new ByteArrayResource(template.getBytes()) {
@@ -50,6 +50,8 @@ public class DocService {
       }
     };
     body.add("document", fileAsResource);
+    body.add("templateDir", templateDir);
+    body.add("templateName", templateName);
     HttpHeaders requestHeaders = new HttpHeaders();
     requestHeaders.setContentType(MediaType.MULTIPART_FORM_DATA);
     HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, requestHeaders);

@@ -24,6 +24,7 @@
 
           <div class="form-group">
             <label>Caminho Exemplo: /Users/cops/Developer/docs/models/EMD/EMD-EMENDA DE REDAÇÃO.docx</label>
+            <label>Caminho Exemplo: /Users/cops/Developer/docs/models/PP/PARECER A PROPOSIÇÃO.docx</label>
           </div>
 
           <button class="btn btn-primary" type="submit" data-bs-toggle="modal" data-bs-target="#waitModal">
@@ -32,12 +33,19 @@
         </div>
       </form>
 
-      <!-- <hr class="mt-2 mb-3" />
+      <hr class="mt-2 mb-3" />
 
       <form id="form-upload" th:action="@{/upload}" method="post" enctype="multipart/form-data">
         <div class="row g-2">
           <div class="form-group">
-            <input id="input-file" name="document" type="file" value="" />
+            <input id="document" name="document" type="file" value="" />
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" id="templateDir" name="templateDir"
+              placeholder="Diretório para o template">
+              <input type="text" class="form-control" id="templateName" name="templateName"
+              placeholder="Nome para o template">
           </div>
 
           <div class="form-group">
@@ -45,7 +53,7 @@
             <input class="btn btn-secondary" type="reset" value="Limpar" />
           </div>
         </div>
-      </form> -->
+      </form>
 
       <div th:replace="~{fragments/wait-modal :: wait()}"></div>
     </div>
